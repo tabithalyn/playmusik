@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div class="main">
+
+  <p id="logo"><i class="uil uil-headphones-alt"></i> Music</p>
+
+  <div class="day_night" id="day-night" onclick="toggleMode()">
+    Night <i class="uil uil-moon"></i>
+  </div>
+
+  <div class="view_tracks">
+    <i class="uil uil-bars" title="View Tracks" onclick="viewTracks()"></i>
+  </div>
+  <div class="track_list" style="display:none">
+    <ul class="trax">
+    </ul>
+  </div>
+
+  <div class="left">
+    <img src="" alt="img" id="track_img">
+    <div class="volume">
+      <p id="show_volume">90</p>
+      <p id="volume_icon"><i class="uil uil-volume" onclick="muteSound()"></i></p>
+      <input type="range" min="0" max="100" value="90" onchange="volumeChange()" id="volume">
+    </div>
+  </div>
+
+  <div class="right">
+    <div class="song_details">
+      <p id="title">title.mp3</p>
+      <p id="artist">Artist Name</p>
+    </div>
+
+    <div class="middle">
+      <button id="prev" onclick="prevSong()"><i class="uil uil-arrow-left"></i></button>
+      <button onclick="justplay()" id="play"><i class="uil uil-play"></i></button>
+      <button id="next" onclick="next_song()"><i class="uil uil-arrow-right"></i></button>
+    </div>
+
+    <div class="duration">
+      <input type="range" id="duration_slider" min="0" max="100" value="0" onchange="changeDuration()">
+      <button id="auto" onclick="autoplayToggle()">Autoplay <i class="uil uil-play-circle"></i></button>
+    </div>
+  </div>
+</div>
+
+<script src="main.js"></script>
+
+</body>
+</html>
